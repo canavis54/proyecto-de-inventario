@@ -1,0 +1,319 @@
+/*diseño de toda la pagina*/
+body {
+   
+    padding: 20px;
+background-color: black;
+color: white;
+}
+/* diseño de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+}
+th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: blue;
+    font-size: 120%;
+    color: white;
+   
+}
+/*diseño del buscador*/
+
+.buscador  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+  
+  .buscador  input[type="text"] {
+    width: 50%; 
+    padding: 10px; 
+    font-size: 18px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    text-align: center;
+  }
+  
+  
+  .buscador  button {
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    background-color: #007bff; 
+    color: white;
+    cursor: pointer;
+  }
+  
+  .buscador  button:hover {
+    background-color: #0056b3; 
+  }
+
+
+/*diseño de modal pra editar y agregar*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 30%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+}
+/*diseño del boton de cerrado del modal*/
+.close { 
+    color:black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+    position: relative;
+
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*diseño de modal de eliminar*/
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 30%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+.content {
+    background-color: black;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    color: white;
+    width: 50%;
+}
+.eliminar{
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.si{
+    background-color: #C90044;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+  border-color: #c90044;
+}
+.no {
+    color: white;
+}
+/*diseño de el registro */
+.elementos input[type=text],input[type=number] {
+    width: 100%;
+    margin: 8px 0;
+    display:flex ;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+    height: 25px;
+}
+label{
+    color: black;
+}
+
+
+/*diseño de texto - base de datos-*/
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+    margin: 0%;
+    padding: 0%;
+    vertical-align: top;
+}
+/*diseño de barra de navegasion*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #787878;
+    padding: 10px 20px;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #C90044;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.cierre{ /*diseño d boton de de cerar sesion */
+    background-color: #c90044;
+    color: white;
+    font-size: 120%;
+color: white;
+margin-bottom: 5px;
+border-color: #c90044;
+
+}
+
+
+
+/*diseño de la imagen */
+
+.negro{
+
+flex: none;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    
+} 
+.todo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+padding: 10px 2px;
+
+}    
+
+.centro{  flex-grow: 1;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+}
+
+.pinchi{ /*diseño de imagen de agregar y editar*/
+    width: 50px;
+    height: 50px;
+   
+}
+
+.imagenes{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    
+}
+
+.imagenes .agrega{/*diseño del boton de agregar*/
+ 
+  font-size: 40px;
+  background-color:#c90044;
+  color: white;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c90044;
+}
+.pinchito{ /*diseño de imagende logo*/
+    height: 200px;
+    height: 200px;
+
+
+ }
+/*diseño de botones*/
+.edit {
+    
+    background-color:#c90044;
+    height: 500%;
+    width: 100%;
+    font-size: 120%;
+color: white;
+margin-bottom: 5px;
+border-color: #c90044;
+}
+
+.delete {  /*diseño d boton de eliminar de la para el modal*/
+    
+    background-color:#c90044;
+    height: 500%;
+    width: 100%;
+    font-size: 120%;
+color: white;
+margin-bottom: 5px;
+border-color: #c90044;
+}
+
+.editar {/*diseño d boton de editar de la para el modal*/
+    
+    background-color:#c90044;
+    height: 500%;
+    width: 100%;
+    font-size: 120%;
+color: white;
+margin-bottom: 5px;
+border-color: #c90044;
+}
+
+.cant{/*diseño d boton de editar cantida de la para el modal*/
+    background-color:#c90044;
+    height: 500%;
+    width: 100%;
+    font-size: 120%;
+color: white;
+margin-bottom: 5px;
+border-color: #c90044;
+}
+.arroz{/*diseño d boton de sumar y restar  del  modal*/
+color: #000;
+font-size: 150%;
+}
+.base{/*diseño de bton de modal de emininar*/
+    background-color:#c90044;
+    height: 500%;
+    width: 100%;
+    font-size: 120%;
+color: white;
+margin: 5px;
+border-color: #c90044;
+}
+.base1{/*diseño de bton de modal de cancelar*/
+    background-color:#c90044;
+    height: 500%;
+    width: 100%;
+    font-size: 120%;
+color: white;
+margin: 5px;
+border-color: #c90044;
+}

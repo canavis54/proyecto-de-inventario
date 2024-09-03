@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base de datos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header><!--bara de navegasion -->
+        <div class="navbar">
+            <div class="navbar-center"> <h1>BASE DE DATOS </h1></div>
+           <a href="users.html">Usuarios</a>
+          
+                <button class="cierre" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </header>
+
+   
+    <CENTER>
+    <img src="./img/negro.png" class="negro"></CENTER>
+    <br>
+    <center>
+       
+        <div class="buscador">
+            <input type="text" id="searchInput" placeholder="buscar carrete">
+    <button onclick="filterTable()">buscar</button>
+    
+        </div>
+        <br>
+          
+
+    <div class="imagenes">
+        <button class="agrega" id="addButton">nuevo</button>
+    <img src="./img/original.png" class="pinchito">
+</div>
+    
+    <table id="itemsTable">
+        <br><br>
+        <thead>
+            <tr>
+                <th>Fila</th>
+                <th>Ubicación</th>
+                <th>No_parte</th>
+                <th>No_parte_2</th>
+                <th>Valor Nominal</th>
+                <th>V_N_1</th>
+                <th>V_N_2</th>
+                <th>Encapsulado</th>
+                <th>Régimen V_CC</th>
+                <th>Tolerancia</th>
+                <th>Cantidad</th>
+                <th>Botones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+ <!-- modal para editar y agregar -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="todo">
+                <img src="./img/pinchito.jpg" class="pinchi">
+                <h2 class="centro" id="modalTitle">Agregar </h2>
+
+                </div>
+            
+            <form id="itemForm"  class="elementos">
+                <input type="hidden" id="itemId">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+                <label for="No_parte">No_parte:</label>
+                <input type="text" id="No_parte" name="No_parte" required>
+                <label for="No_parte_2">No_parte_2:</label>
+                <input type="text" id="No_parte_2" name="No_parte_2" required>
+                <label for="valor_nominal">Valor Nominal:</label>
+                <input list="componentValues" type="text" id="valor_nominal" name="valor_nominal" required>
+                <label for="v_n_1">V_N_1:</label>
+                <input list="componentValues" type="text" id="v_n_1" name="v_n_1" required>
+                <label for="v_n_2">V_N_2:</label>
+                <input list="componentValues" type="text" id="v_n_2" name="v_n_2" required>
+                <label for="encapsulado">Encapsulado:</label>
+                <input type="text" id="encapsulado" name="encapsulado" required>
+                <label for="regimen_v_cc">Régimen V_CC:</label>
+                <input type="text" id="regimen_v_cc" name="regimen_v_cc" required>
+                <label for="tolerancia">Tolerancia:</label>
+                <input type="text" id="tolerancia" name="tolerancia" required>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+                <button class="si" type="submit">guardar</button>
+                <button class="si" type="button" id="cancelEditAddBtn">Cancelar</button>
+
+                <!-- opcines de para los valores  --> 
+            </form>
+            <datalist id="componentValues">
+                <option value="pF">pF</option>
+                <option value="nF">nF</option>
+                <option value="µF">µF</option>
+                <option value="Ω">Ω</option>
+                <option value="kΩ">kΩ</option>
+                <option value="MΩ">MΩ</option>
+            </datalist>
+        </div>
+    </div>
+    <!-- modal para editar la cantida  -->
+<div id="editQuantityModal" class="modal2">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="todo">
+            <img src="./img/pinchito.jpg" class="pinchi">
+            <p class="centro">Editar</p>
+        </div>
+        <span id="editItemId"></span>
+        <div class="arroz">
+        <p>Cantidad actual: <span id="currentCantidad"></span></p>
+        <p>Nueva cantidad: <span id="resultQuantity">0</span></p>
+    </div>
+        <input class="can" type="number" id="editCantidad" placeholder="Nueva cantidad">
+        <br>
+        <button class="si" id="incrementButton">+</button>
+        <button class="si" id="decrementButton">-</button>
+        <br><br>
+        <button class="si" id="updateQuantityButton">Guardar</button>
+        <button class="si" type="button" id="cancelEditQuantityBtn">Cancelar</button>
+
+    </div>
+</div>
+<!--Modal de eliminar -->
+<div id="deleteUserModal" class="modal2">
+    <div class="content">
+        <span class="close">&times;</span>
+        <h1>Eliminar</h1>
+        <p class="no">¿Quieres eliminar esta fila?</p>
+        <div class="eliminar">
+            <button class="base" id="confirmDeleteBtn">Eliminar</button>
+            <button class="base1" id="cancelDeleteBtn">Cancelar</button>
+        </div>
+    </div>
+</div>
+    </div>
+   
+    <script src="js/admin.js"></script>
+</body>
+</html>
+
+
+
